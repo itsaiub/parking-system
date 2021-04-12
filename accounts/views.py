@@ -18,8 +18,6 @@ def register(request):
         contact_number = request.POST.get('contact_number', '')
         # dob = request.POST.get('dob')
         gender = request.POST.get('gender')
-        question = request.POST.get('question')
-        answer = request.POST.get('answer')
 
         # check passwor match
         if password == password2:
@@ -38,9 +36,7 @@ def register(request):
                     email=email,
                     address=address,
                     contact_number=contact_number,
-                    gender=gender,
-                    question=question,
-                    answer=answer
+                    gender=gender
                 )
                 # auth.login(request, user)
                 # messages.success(request, 'register successful')
