@@ -17,6 +17,7 @@ def register(request):
         address = request.POST.get('address')
         contact_number = request.POST.get('contact_number', '')
         # dob = request.POST.get('dob')
+        # question = request.POST.get('question')
         gender = request.POST.get('gender')
 
         # check passwor match
@@ -36,6 +37,8 @@ def register(request):
                     email=email,
                     address=address,
                     contact_number=contact_number,
+                    dob = '2000-01-01',
+                    question = 'null',
                     gender=gender
                 )
                 # auth.login(request, user)

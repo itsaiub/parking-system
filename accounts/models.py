@@ -33,7 +33,9 @@ class Registration(AbstractUser):
     password = models.CharField(max_length=20, default="")
     address = models.CharField(max_length=200, default="")
     contact_number = models.CharField(max_length=11, default="")
-    # dob = models.DateField(default=datetime.date.today)
+    dob = models.DateField(default=datetime.date.today)
+    question = models.CharField(
+        max_length=10, choices=QUES_CHOICE, default='male')
     gender = models.CharField(
         max_length=10, choices=GENDER_CHOICE, default='male')
 

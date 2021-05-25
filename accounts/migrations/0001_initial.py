@@ -25,8 +25,6 @@ class Migration(migrations.Migration):
                 ('contact_number', models.CharField(default='', max_length=11)),
                 ('dob', models.DateField(default=datetime.date.today)),
                 ('gender', models.CharField(choices=[('male', 'Male'), ('female', 'Female'), ('others', 'Others')], default='male', max_length=10)),
-                ('question', models.CharField(choices=[('book', 'What Is your favorite book?'), ('food', 'What is your favorite food?'), ('city', 'What city were you born in?'), ('place', 'Where is your favorite place to vacation?')], default='book', max_length=10)),
-                ('answer', models.CharField(default='', max_length=20)),
             ],
         ),
     ]
